@@ -11,8 +11,9 @@
       <tr>
         <th class="py-2 px-4 border-b">ID</th>
         <th class="py-2 px-4 border-b">Search Term</th>
+        <th class="py-2">Search Count</th>
         <th class="py-2 px-4 border-b">User IP</th>
-        <th class="py-2 px-4 border-b">Created At</th>
+        <th class="py-2 px-4 border-b">Searched At</th>
       </tr>
     </thead>
     <tbody class="text-right">
@@ -20,6 +21,7 @@
         <tr>
           <td class="py-2 px-4 border-b"><%= search_log.id %></td>
           <td class="py-2 px-4 border-b"><%= search_log.term %></td>
+          <td class="py-2 px-4 border-b"><%= search_log.search_count %></td>
           <td class="py-2 px-4 border-b"><%= search_log.user_ip %></td>
           <td class="py-2 px-4 border-b"><%= search_log.created_at %></td>
         </tr>
