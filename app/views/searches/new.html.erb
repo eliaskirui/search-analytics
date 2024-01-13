@@ -1,0 +1,18 @@
+
+<div class="container mx-auto mt-8">
+  <h1 class="text-3xl font-bold mb-4">New Search</h1>
+
+  <%= form_with(url: searches_path, method: :post, remote: true, id: 'search-form') do |form| %>
+    <div class="mb-4">
+      <%= form.label :term, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :term, id: "search-input", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.submit "Search", class: "bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+    </div>
+  <% end %>
+</div>
+<!--<div class="container mx-auto mt-8">-->
+<!--    <div id="search-logs"></div>-->
+<!--</div>-->
