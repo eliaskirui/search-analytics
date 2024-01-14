@@ -11,7 +11,12 @@ class SearchesController < ApplicationController
 
     if valid_search?(term)
       user_ip = request = request.remote_ip if request.present?
-      SearchLog.create!(term: term, user_ip: user_ip)
+      if search_log = SearchLog.find_by(term: term)
+        search_log.increment_search_count
+      else
+        SearchLog.create!(term: term, user_ip: user_ip)
+      end
+      # SearchLog.create!(term: term, user_ip: user_ip)
       log_search(term, user_ip)
     end
 
