@@ -25,7 +25,8 @@ set :deploy_to, "/home/search/search.eliaskirui.com"
 append :linked_files, "config/credentials/production.key"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle", ".bundle", "public/system", "public/uploads"
+# Only add "vendor/javascript" if you are using importmap
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle", "vendor/javascript", ".bundle", "public/system", "public/uploads"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -39,5 +40,5 @@ set :keep_releases, 5
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-Rake::Task["deploy:assets:precompile"].clear
-Rake::Task["deploy:assets:backup_manifest"].clear
+# Rake::Task["deploy:assets:precompile"].clear
+# Rake::Task["deploy:assets:backup_manifest"].clear
