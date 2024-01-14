@@ -1,0 +1,2 @@
+import*as e from"@babel/types";var t="default"in e?e.default:e;var a={};Object.defineProperty(a,"__esModule",{value:true});a.default=annotateAsPure;var n=t;const{addComment:o}=n;const s="#__PURE__";const isPureAnnotated=({leadingComments:e})=>!!e&&e.some((e=>/[@#]__PURE__/.test(e.value)));function annotateAsPure(e){const t=e.node||e;isPureAnnotated(t)||o(t,"leading",s)}const d=a.__esModule;export{d as __esModule,a as default};
+
