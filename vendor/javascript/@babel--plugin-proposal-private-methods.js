@@ -1,2 +1,0 @@
-import*as e from"@babel/helper-plugin-utils";import*as a from"@babel/helper-create-class-features-plugin";var r="default"in e?e.default:e;var t="default"in a?a.default:a;var l={};Object.defineProperty(l,"__esModule",{value:true});l.default=void 0;var s=r;var u=t;var o=(0,s.declare)(((e,a)=>{e.assertVersion(7);return(0,u.createClassFeaturePlugin)({name:"proposal-private-methods",api:e,feature:u.FEATURES.privateMethods,loose:a.loose,manipulateOptions(e,a){a.plugins.push("classPrivateMethods")}})}));l.default=o;const i=l.__esModule;export{i as __esModule,l as default};
-

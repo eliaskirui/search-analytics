@@ -25,8 +25,7 @@ set :deploy_to, "/home/search/search.eliaskirui.com"
 append :linked_files, "config/credentials/production.key"
 
 # Default value for linked_dirs is []
-# Only add "vendor/javascript" if you are using importmap
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle", "vendor/javascript", ".bundle", "public/system", "public/uploads", "node_modules"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
